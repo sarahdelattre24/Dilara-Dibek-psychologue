@@ -468,6 +468,7 @@ footer {
     font-size: 11px;
 }
 
+
 /* =========================
    RESPONSIVE
 ========================= */
@@ -476,7 +477,7 @@ footer {
 
 @media (max-width: 900px) {
 
-    /* Menu */
+    /* HEADER ET MENU */
 
     .header {
         flex-direction: column;
@@ -487,20 +488,31 @@ footer {
 
     nav {
         width: 100%;
-        justify-content: center;
-    }
-
-    nav > ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 15px;
     }
 
-    nav a {
+    nav > ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 20px;
+    }
+
+    nav > ul > li {
         white-space: nowrap;
     }
 
-    /* Les sections passent sur une colonne */
+    .nav-button {
+        display: inline-block;
+        width: auto;
+        white-space: nowrap;
+        padding: 10px 18px;
+    }
+
+    /* SECTIONS */
 
     .about-hero,
     .presentation,
@@ -511,33 +523,32 @@ footer {
         padding: 60px 7%;
     }
 
-    /* Images */
+    /* IMAGES */
 
     .about-hero-image img,
     .approach-image img {
         height: 380px;
     }
 
-    /* Valeurs */
+    /* VALEURS */
 
     .values {
         padding: 60px 7%;
     }
 
-    /* Contact */
+    /* CONTACT */
 
     .contact {
         padding: 60px 7%;
     }
 
-    /* Pied de page */
+    /* PIED DE PAGE */
 
     footer {
         flex-direction: column;
         text-align: center;
         gap: 20px;
     }
-
 }
 
 
@@ -545,25 +556,40 @@ footer {
 
 @media (max-width: 550px) {
 
-    /* Menu */
+    /* HEADER ET MENU */
 
     .header {
         padding: 20px 15px;
     }
 
-    nav > ul {
-        gap: 12px;
+    .logo {
+        font-size: 18px;
+        text-align: center;
     }
 
-    nav a {
+    nav {
+        width: 100%;
+        gap: 18px;
+    }
+
+    nav > ul {
+        width: 100%;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    nav > ul > li > a {
         font-size: 11px;
+        white-space: nowrap;
     }
 
     .nav-button {
-        padding: 8px 12px;
+        padding: 10px 18px;
+        font-size: 12px;
+        white-space: nowrap;
     }
 
-    /* Présentation */
+    /* SECTIONS */
 
     .about-hero,
     .presentation,
@@ -574,14 +600,14 @@ footer {
         gap: 30px;
     }
 
-    /* Images */
+    /* IMAGES */
 
     .about-hero-image img,
     .approach-image img {
         height: 280px;
     }
 
-    /* Titres */
+    /* TITRES */
 
     .about-hero h1 {
         font-size: 36px;
@@ -594,7 +620,7 @@ footer {
         font-size: 30px;
     }
 
-    /* Cartes des valeurs */
+    /* VALEURS */
 
     .values {
         padding: 50px 6%;
@@ -609,7 +635,7 @@ footer {
         padding: 25px;
     }
 
-    /* Citation */
+    /* CITATION */
 
     .quote {
         padding: 60px 6%;
@@ -619,7 +645,7 @@ footer {
         font-size: 30px;
     }
 
-    /* Contact */
+    /* CONTACT */
 
     .contact {
         padding: 55px 6%;
@@ -629,10 +655,11 @@ footer {
         font-size: 36px;
     }
 
-    /* Pied de page */
+    /* PIED DE PAGE */
 
     footer {
         padding: 30px 6%;
+        gap: 20px;
     }
 
     .footer-links {
@@ -640,5 +667,4 @@ footer {
         justify-content: center;
         gap: 12px;
     }
-
 }
