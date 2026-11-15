@@ -459,107 +459,8 @@ footer {
 
 
 /* =========================
-   RESPONSIVE
+   GALERIE PHOTOS
 ========================= */
-
-/* TABLETTES */
-
-@media (max-width: 900px) {
-
-    /* Le menu passe sur plusieurs lignes si nécessaire */
-    .header {
-        flex-direction: column;
-        height: auto;
-        gap: 20px;
-    }
-
-    nav > ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    /* Les sections passent sur une colonne */
-    .hero,
-    .about,
-    .sessions {
-        grid-template-columns: 1fr;
-    }
-
-    /* Les services passent sur deux colonnes */
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* La galerie passe sur deux colonnes */
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Les informations de contact */
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-infos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Le pied de page */
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-
-/* TELEPHONES */
-
-@media (max-width: 550px) {
-
-    /* Les services et la galerie passent sur une colonne */
-    .services-grid,
-    .gallery-grid,
-    .contact-infos {
-        grid-template-columns: 1fr;
-    }
-
-    /* Les titres deviennent plus petits */
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .welcome h2,
-    .about h2,
-    .sessions h2,
-    .section-heading h2,
-    .contact h2 {
-        font-size: 30px;
-    }
-
-    /* Les images s'adaptent à l'écran */
-    .hero-image img,
-    .about-image img {
-        height: 300px;
-    }
-
-    /* Les espacements sont réduits */
-    .hero,
-    .about,
-    .sessions,
-    .welcome,
-    .services,
-    .contact,
-    .gallery {
-        padding: 50px 6%;
-    }
-
-    /* Le formulaire prend toute la largeur */
-    .contact-content {
-        padding: 0 20px;
-    }
-
-
-/* GALERIE PHOTOS */
 
 .gallery {
     padding: 90px 6%;
@@ -598,42 +499,15 @@ footer {
     transform: scale(1.04);
 }
 
-/* TABLETTES */
-
-@media (max-width: 900px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .gallery-item {
-        height: 240px;
-    }
-}
-
-/* TELEPHONES */
-
-@media (max-width: 600px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-item {
-        height: 260px;
-    }
-}
-
 
 /* =========================
    PAGE CONTACT
 ========================= */
 
-/* Organisation générale */
-
 .contact-content {
     max-width: 1200px;
     margin: 70px auto;
     padding: 0 50px;
-
     display: grid;
     grid-template-columns: 1.3fr 0.7fr;
     gap: 70px;
@@ -644,8 +518,6 @@ footer {
 .contact-sidebar {
     min-width: 0;
 }
-
-/* Formulaire */
 
 .contact-form {
     display: flex;
@@ -669,35 +541,18 @@ footer {
 .form-group input,
 .form-group textarea {
     width: 100%;
+    box-sizing: border-box;
     padding: 15px;
     border: 1px solid #DADDD4;
     background: white;
     color: var(--dark-green);
     font-family: 'DM Sans', sans-serif;
     font-size: 13px;
-    outline: none;
-    transition: .3s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--sage);
 }
 
 .form-group textarea {
     resize: vertical;
     min-height: 150px;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #A0A39B;
-}
-
-.required-note,
-.privacy-note {
-    font-size: 11px;
-    color: var(--text);
 }
 
 .contact-form .button {
@@ -706,8 +561,6 @@ footer {
     font-family: 'DM Sans', sans-serif;
     align-self: flex-start;
 }
-
-/* Informations pratiques */
 
 .sidebar-detail {
     display: flex;
@@ -737,10 +590,6 @@ footer {
     overflow-wrap: anywhere;
 }
 
-.sidebar-detail a:hover {
-    color: #82947B;
-}
-
 .sidebar-message {
     margin-top: 40px;
     padding: 25px;
@@ -749,37 +598,100 @@ footer {
 }
 
 
-/* MENU SUR TELEPHONE */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media (max-width: 550px) {
+/* TABLETTES */
+
+@media (max-width: 900px) {
 
     .header {
-        padding: 20px 15px;
+        flex-direction: column;
+        height: auto;
         gap: 20px;
     }
 
-    nav {
-        width: 100%;
-    }
-
     nav > ul {
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
     }
 
-    nav > ul > li > a {
-        font-size: 12px;
-        white-space: nowrap;
+    .hero,
+    .about,
+    .sessions {
+        grid-template-columns: 1fr;
     }
 
-    .nav-button {
-        padding: 10px;
+    .services-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
+    .contact-content {
+        grid-template-columns: 1fr;
+        padding: 0 30px;
+        gap: 50px;
+    }
+
+    .contact-infos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 
+/* TELEPHONES */
 
+@media (max-width: 550px) {
 
+    .services-grid,
+    .gallery-grid,
+    .contact-infos {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .welcome h2,
+    .about h2,
+    .sessions h2,
+    .section-heading h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    .hero-image img,
+    .about-image img {
+        height: 300px;
+    }
+
+    .hero,
+    .about,
+    .sessions,
+    .welcome,
+    .services,
+    .contact,
+    .gallery {
+        padding: 50px 6%;
+    }
+
+    .contact-content {
+        padding: 0 20px;
+    }
+
+    .contact-form .button {
+        align-self: stretch;
+    }
+
+    .gallery-item {
+        height: 260px;
+    }
+
+}
