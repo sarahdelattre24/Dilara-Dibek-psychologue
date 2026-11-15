@@ -89,8 +89,6 @@ nav a {
     transition: .3s;
 }
 
-nav a:hover;
-
 nav a.active {
     color: #82947B;
 }
@@ -470,71 +468,177 @@ footer {
     font-size: 11px;
 }
 
-
 /* =========================
    RESPONSIVE
 ========================= */
 
+/* TABLETTES */
+
 @media (max-width: 900px) {
 
+    /* Menu */
+
     .header {
-        padding: 25px 5%;
         flex-direction: column;
-        gap: 25px;
+        height: auto;
+        padding: 25px 5%;
+        gap: 20px;
     }
 
     nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav > ul {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
+
+    nav a {
+        white-space: nowrap;
+    }
+
+    /* Les sections passent sur une colonne */
 
     .about-hero,
     .presentation,
     .approach,
     .formation {
         grid-template-columns: 1fr;
-        gap: 45px;
-        padding: 75px 7%;
+        gap: 40px;
+        padding: 60px 7%;
     }
 
-    .about-hero-image img {
-        height: 380px;
-    }
+    /* Images */
 
+    .about-hero-image img,
     .approach-image img {
         height: 380px;
     }
 
-    .values,
-    .contact {
-        padding: 75px 7%;
+    /* Valeurs */
+
+    .values {
+        padding: 60px 7%;
     }
+
+    /* Contact */
+
+    .contact {
+        padding: 60px 7%;
+    }
+
+    /* Pied de page */
 
     footer {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
     }
+
 }
+
+
+/* TELEPHONES */
 
 @media (max-width: 550px) {
 
-    .values-grid {
+    /* Menu */
+
+    .header {
+        padding: 20px 15px;
+    }
+
+    nav > ul {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .nav-button {
+        padding: 8px 12px;
+    }
+
+    /* Présentation */
+
+    .about-hero,
+    .presentation,
+    .approach,
+    .formation {
         grid-template-columns: 1fr;
+        padding: 45px 6%;
+        gap: 30px;
+    }
+
+    /* Images */
+
+    .about-hero-image img,
+    .approach-image img {
+        height: 280px;
+    }
+
+    /* Titres */
+
+    .about-hero h1 {
+        font-size: 36px;
     }
 
     .presentation-heading h2,
     .approach h2,
     .formation h2,
     .section-heading h2 {
-        font-size: 34px;
+        font-size: 30px;
     }
 
-    .about-hero h1 {
-        font-size: 40px;
+    /* Cartes des valeurs */
+
+    .values {
+        padding: 50px 6%;
     }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .value-card {
+        padding: 25px;
+    }
+
+    /* Citation */
 
     .quote {
-        padding: 75px 7%;
+        padding: 60px 6%;
     }
+
+    .quote h2 {
+        font-size: 30px;
+    }
+
+    /* Contact */
+
+    .contact {
+        padding: 55px 6%;
+    }
+
+    .contact h2 {
+        font-size: 36px;
+    }
+
+    /* Pied de page */
+
+    footer {
+        padding: 30px 6%;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
 }
